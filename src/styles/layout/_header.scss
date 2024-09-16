@@ -1,0 +1,175 @@
+header {
+  background-color: $color-primary;
+}
+
+.wrapper.header {
+  @include flex($justify: space-between, $alignItems: center);
+  width: 90%;
+  padding: 24px 0;
+}
+
+.logo {
+  @include flex($justify: space-between, $gap: 10px, $alignItems: center);
+  color: $color-white;
+  text-decoration: none;
+
+  &__img {
+    & path {
+      fill: $color-red;
+    }
+  }
+
+  &__text {
+    font-weight: 600;
+    @include transition($time: 0.3s);
+  }
+
+  @media (hover:hover) {
+    &:hover {
+      .logo__text {
+        color: $color-grey-dark;
+      }
+    }
+  }
+}
+
+.navbar {
+  width: 50%;
+
+  @include media-tablet {
+    transform: translateX(1000px);
+    position: fixed;
+    top: 0;
+    left: 50%;
+    right: 0;
+    bottom: 0;
+    background-color: $color-primary;
+    transition: transform 1s linear;
+
+    &.active {
+      transform: translateX(0px);
+    }
+  }
+
+  @include media-mobile {
+    left: 0;
+    width: 100%;
+
+    &.active {
+      transform: translateX(0px);
+    }
+  }
+}
+
+.nav__list {
+  @include flex($alignItems: center, $justify: space-between);
+  width: 100%;
+  list-style: none;
+
+
+  @include media-tablet {
+    flex-direction: column;
+    margin: auto;
+    padding-top: 100px;
+
+    & li {
+      width: 100%;
+      padding: 20px 0;
+      text-align: center;
+
+      &:active {
+        background-color: $color-red;
+      }
+    }
+  }
+
+  & a {
+    text-decoration: none;
+    color: $color-white;
+
+    @media (hover:hover) {
+      &:hover {
+        @include transition($time: 0.3s);
+        color: $color-grey-dark;
+      }
+    }
+  }
+}
+
+.service-text {
+  @include flex($alignItems: center, $gap: 10px);
+  color: $color-white;
+  word-spacing: -2px;
+
+  & span {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: $color-red;
+  }
+
+  @include media-tablet {
+    display: none;
+  }
+}
+
+.humb_btn {
+  z-index: 10;
+  position: relative;
+  display: none;
+  width: 34px;
+  height: 32px;
+  background-color: transparent;
+  border: none;
+
+  @include media-tablet {
+    @include flex($direction: column, $gap: 5px, $justify: center, $alignItems: center);
+  }
+
+  & span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: $color-red;
+    @include transition($time: 0.5s);
+    border-radius: $radius-base;
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 100%;
+      height: 3px;
+      background-color: $color-grey-dark;
+      border-radius: $radius-base;
+      @include transition($time: 0.5s);
+    }
+
+    &::before {
+      top: 0;
+    }
+
+    &::after {
+      bottom: 0;
+    }
+  }
+
+  
+  &.active {
+    & span {
+      background-color: transparent;
+  
+      &::before {
+        top: 50%;
+        transform: rotate(45deg);
+      }
+      
+      &::after {
+        bottom: 37%;
+        transform: rotate(-225deg);
+      }
+    }
+  }
+}

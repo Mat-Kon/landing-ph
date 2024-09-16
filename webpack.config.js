@@ -49,7 +49,4 @@ module.exports = {
   resolve: {
     extensions: ['.ts', '.js', '.json'],
   },
-  externals: {
-    ace: 'ace',
-  },
 };
