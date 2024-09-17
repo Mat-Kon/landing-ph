@@ -79,12 +79,20 @@
   &__heading {
     max-width: 673px;
     text-align: center;
+
+    @include media-mobile {
+      padding: 0 10px;
+    }
   }
 
   &__second-list {
     @include flex($justify: space-between, $gap: 40px, $alignItems: center);
     color: $color-grey-dark;
     list-style: none;
+
+    @include media-mobile {
+      flex-direction: column;
+    }
 
     & li {
       @include flex($gap: 8px, $alignItems: center);

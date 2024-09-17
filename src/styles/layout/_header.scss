@@ -157,16 +157,20 @@ header {
     }
   }
 
-  
+
   &.active {
+    position: fixed;
+    top: 24px;
+    right: 20px;
+
     & span {
       background-color: transparent;
-  
+
       &::before {
         top: 50%;
         transform: rotate(45deg);
       }
-      
+
       &::after {
         bottom: 37%;
         transform: rotate(-225deg);
