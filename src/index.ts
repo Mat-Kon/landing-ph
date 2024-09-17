@@ -1,2 +1,2 @@
 import './styles/main.scss';
-import './ts/hamburger';
+import './ts/components/hamburger';

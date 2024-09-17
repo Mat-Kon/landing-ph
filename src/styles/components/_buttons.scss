@@ -1,0 +1,48 @@
+@keyframes calling {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(30deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.btn-call-us {
+  @include flex($alignItems: center, $gap: 15px);
+  padding: 8px;
+  border-radius: calc($fs-call-btn + 8px);
+  background-color: $color-sky-blue;
+  font-size: $fs-call-btn;
+  font-weight: 600;
+  text-decoration: none;
+  color: $color-white;
+  @include transition($time: 0.5s);
+  
+  &__icon {
+    @include SVGSetting($size: 42px);
+    @include flex($justify: center, $alignItems: center);
+    border-radius: 50%;
+    background-color: $color-white;
+    @include transition($time: 0.5s);
+  }
+  
+  &:hover {
+    cursor: pointer;
+    background-color: $color-white;
+    color: $color-sky-blue;
+    box-shadow: 0px 0px 10px 10px $color-sky-blue;
+    
+    & > .btn-call-us__icon {
+      background-color: $color-sky-blue;
+      animation: calling 0.5s infinite ease-in;
+      & svg {
+        & path {
+          fill: $color-white;
+        }
+      }
+    }
+  }
+}

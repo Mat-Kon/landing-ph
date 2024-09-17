@@ -1,3 +1,5 @@
+import { hiddenBodyScroll, viewBodyScroll } from "../helpers/helpers";
+
 const BtnElement = document.querySelector('.humb_btn');
 const menu = document.querySelector('.navbar');
 
@@ -5,6 +7,11 @@ BtnElement?.addEventListener('click', toggleActiveMenu);
 document?.addEventListener('click', handleClickOutsideMenu);
 
 function toggleActiveMenu() {
+  if (menu?.classList.contains('active')) {
+    viewBodyScroll();
+  } else {
+    hiddenBodyScroll();
+  }
   BtnElement?.classList.toggle('active');
   menu?.classList.toggle('active');
 };
