@@ -1,0 +1,87 @@
+.service {
+  padding: 60px 0;
+
+  & .wrapper {
+    @include flex($direction: column, $alignItems: center, $gap: 60px);
+  }
+
+  & .service__call-us {
+    width: 90%;
+    justify-content: center;
+    background-color: $color-white;
+    color: $color-sky-blue;
+
+    &:hover {
+      box-shadow: 0px 0px 3px 2px $color-white;
+    }
+  }
+}
+
+.service__header {
+  width: fit-content;
+  @include flex($direction: column, $alignItems: center, $gap: 25px);
+
+  & h2 {
+    text-align: center;
+  }
+
+  & p {
+    width: 60%;
+    text-align: center;
+    font-weight: 300;
+  }
+}
+
+.service__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  list-style: none;
+
+  @include media-mobile {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  & li {
+    @include flex($direction: column, $gap: 15px);
+    padding: 15px;
+
+    @include media-mobile {
+      width: 80%;
+      grid-template-columns: 1fr;
+      align-items: center;
+    }
+
+    & h4 {
+      font-size: $fs-big;
+    }
+
+    & p {
+      font-weight: 300;
+
+
+      @include media-mobile {
+        text-align: center;
+      }
+    }
+
+  }
+
+  .service__more {
+    align-items: center;
+    background-color: $color-sky-blue;
+    border-radius: calc($radius-base * 2);
+    color: $color-white;
+
+    & p {
+      text-align: center;
+    }
+  }
+}
+
+.service__icons {
+  @include flex($justify: center, $alignItems: center);
+  @include SVGSetting($size: 54px);
+  background-color: $color-primary;
+  border-radius: $radius-base;
+}
