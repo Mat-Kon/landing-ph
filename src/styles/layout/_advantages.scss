@@ -1,0 +1,120 @@
+.advantages {
+  padding: 25px 25px;
+
+  & .wrapper {
+    width: 80%;
+    @include flex($direction: column, $gap: 100px, $alignItems: center);
+    padding: 60px 0;
+  }
+}
+
+.advantages__colorWrap {
+  position: relative;
+  border-radius: calc($radius-base * 2);
+  background-color: $color-primary;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 10%;
+    right: -1px;
+    width: 2%;
+    height: 80%;
+    clip-path: polygon(0% 5%, 100% 0%, 100% 100%, 0% 95%);
+    background-color: $color-white;
+
+    @include media-mobile {
+      display: none;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 10%;
+    left: -1px;
+    width: 2%;
+    height: 80%;
+    clip-path: polygon(0% 0%, 100% 5%, 100% 95%, 0% 100%);
+    background-color: $color-white;
+
+    @include media-mobile {
+      display: none;
+    }
+  }
+}
+
+.advantages__header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+  color: $color-white;
+
+  & h2 {
+    flex: 1;
+  }
+
+  & p {
+    flex: 1;
+    font-weight: 300;
+  }
+
+  @include media-tablet {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  @include media-mobile {
+    & h2, p {
+      text-align: center;
+    }
+  }
+}
+
+.advantages__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+  color: $color-white;
+  list-style: none;
+
+  @include media-tablet {
+    gap: 30px;
+  }
+
+  @include media-mobile {
+    grid-template-columns: 1fr;
+  }
+
+  & li {
+    @include flex($alignItems: center, $gap: 30px);
+
+    @include media-tablet {
+      flex-direction: column;
+    }
+  }
+}
+
+.list__icon {
+  @include flex($alignItems: center, $justify: center);
+  @include SVGSetting($size: 100px);
+}
+
+.list__content {
+  @include flex($direction: column, $gap: 15px);
+
+  & h4 {
+    font-size: $fs-big;
+  }
+
+  & p {
+    font-size: 1.6rem;
+  }
+
+  
+  @include media-mobile {
+    & h4, p {
+      text-align: center;
+    }
+  }
+}
