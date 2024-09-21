@@ -482,81 +482,118 @@
       </div>
     </section>
 
-    <section>
+    <section class="how-work">
       <div class="wrapper">
-        <div>
-          <figure>
-            <img src="" alt="photo">
-            <img src="" alt="icon">
-          </figure>
+        <div class="how-work__img-wrapper">
+          <div class="how-work__img">
+            <figure>
+              <!-- <div class="how-work__img-worker"></div> -->
+              <img class="how-work__img-worker" src="./assets/images/Worker.png" alt="photo" width="100" height="100">
+              <div class="how-work__img-icon">
+                <svg width="66" height="66" viewBox="0 0 66 66" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M29.0055 8.86002C31.117 6.71666 34.5744 6.71666 36.6859 8.86002L39.4981 11.7146C40.521 12.753 41.9209 13.3329 43.3786 13.322L47.3856 13.292C50.3942 13.2695 52.8389 15.7142 52.8164 18.7228L52.7864 22.7298C52.7755 24.1875 53.3554 25.5874 54.3938 26.6103L57.2484 29.4225C59.3917 31.534 59.3917 34.9914 57.2484 37.1029L54.3938 39.915C53.3554 40.938 52.7755 42.3379 52.7864 43.7956L52.8164 47.8026C52.8389 50.8112 50.3942 53.2559 47.3856 53.2334L43.3786 53.2034C41.9209 53.1925 40.521 53.7724 39.4981 54.8108L36.6859 57.6654C34.5744 59.8087 31.117 59.8087 29.0055 57.6654L26.1934 54.8108C25.1704 53.7724 23.7705 53.1925 22.3128 53.2034L18.3058 53.2334C15.2972 53.2559 12.8525 50.8112 12.875 47.8026L12.905 43.7956C12.9159 42.3379 12.336 40.938 11.2976 39.915L8.44303 37.1029C6.29967 34.9914 6.29967 31.534 8.44303 29.4225L11.2976 26.6103C12.336 25.5874 12.9159 24.1874 12.905 22.7298L12.875 18.7228C12.8525 15.7142 15.2972 13.2695 18.3058 13.292L22.3128 13.322C23.7705 13.3329 25.1704 12.753 26.1934 11.7146L29.0055 8.86002Z"
+                    fill="#15B2F5" stroke="url(#paint0_linear_806_10414)" stroke-width="1.725" />
+                  <path d="M43.627 27.8721L31.835 38.6533L24.7598 33.5798" stroke="white" stroke-width="5.39062"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                  <defs>
+                    <linearGradient id="paint0_linear_806_10414" x1="32.8457" y1="4.96191" x2="97.3176" y2="129.216"
+                      gradientUnits="userSpaceOnUse">
+                      <stop stop-color="white" />
+                      <stop offset="1" stop-color="#13ABEC" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+            </figure>
+          </div>
         </div>
 
-        <div>
+        <div class="how-work__content">
           <h2>How HomePro works?</h2>
-          <ol>
+          <ol class="how-work__list">
             <li>
-              <h4>Call us anytime 24/7</h4>
-              <p>You can contact us directly, we will quickly put you in touch with our home care professionals who are
-                ready anytime</p>
+              <div class="how-work__list-item">
+                <h4>Call us anytime 24/7</h4>
+                <p>You can contact us directly, we will quickly put you in touch with our home care professionals who
+                  are
+                  ready anytime</p>
+              </div>
             </li>
             <li>
-              <h4>Schedule Service</h4>
-              <p>After connecting your call, our home care experts will answer your questions and provide flexible
-                appointment times</p>
+              <div class="how-work__list-item">
+                <h4>Schedule Service</h4>
+                <p>After connecting your call, our home care experts will answer your questions and provide flexible
+                  appointment times</p>
+              </div>
             </li>
             <li>
-              <h4>Your request is complated</h4>
-              <p>Once your technician arrives, he will diagnose the problem and provide an estimate. If you decide to
-                continue, the technician will get to work</p>
+              <div class="how-work__list-item">
+                <h4>Your request is complated</h4>
+                <p>Once your technician arrives, he will diagnose the problem and provide an estimate. If you decide to
+                  continue, the technician will get to work</p>
+              </div>
             </li>
           </ol>
         </div>
       </div>
     </section>
 
-    <section>
+    <section class="comment">
       <div class="wrapper">
-        <h2>Here our original reviews from trusted platform</h2>
+        <h2 class="comment__heading">Here our original reviews from trusted platform</h2>
 
-        <figure>
-          <img src="" alt="image">
+        <figure class="comment__logo">
+          <img src="./assets/images/commentLogo.png" alt="image">
         </figure>
 
-        <div>
-          <div>
-            <button>prev</button>
-            <button>next</button>
+        <div class="comment__slider">
+          <div class="slider__buttons">
+            <button class="slider_prev-btn" disabled>
+              <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19 12.5L5 12.5" stroke="white" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M12 19.5L5 12.5L12 5.5" stroke="white" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+
+            <button class="slider_next-btn active">
+              <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 12.5H19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M12 5.5L19 12.5L12 19.5" stroke="white" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
           </div>
 
-          <div>
-            <ul>
-              <li>
-                <figure><img src="" alt="image"></figure>
+          <div class="slider__view">
+            <ul class="slider__list">
+              <li class="slider__item">
+                <img src="./assets/images/comment.png" alt="image">
               </li>
-              <li>
-                <figure><img src="" alt="image"></figure>
+              <li class="slider__item">
+                <img src="./assets/images/comment.png" alt="image">
               </li>
-              <li>
-                <figure><img src="" alt="image"></figure>
+              <li class="slider__item">
+                <img src="./assets/images/comment.png" alt="image">
               </li>
-              <li>
-                <figure><img src="" alt="image"></figure>
+              <li class="slider__item">
+                <img src="./assets/images/comment.png" alt="image">
               </li>
-              <li>
-                <figure><img src="" alt="image"></figure>
+              <li class="slider__item">
+                <img src="./assets/images/comment.png" alt="image">
               </li>
             </ul>
           </div>
 
-          <div>
-            <ul>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul>
-          </div>
+          <ul class="slider__status">
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
         </div>
       </div>
     </section>
