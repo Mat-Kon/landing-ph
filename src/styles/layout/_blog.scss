@@ -1,0 +1,5 @@
+.blog {
+  & .wrapper {
+    @include flex($direction: column, $gap: 55px);
+  }
+}
