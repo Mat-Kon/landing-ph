@@ -1,6 +1,6 @@
 .comment {
   .wrapper {
-    @include flex($direction: column, $gap: 65px, $alignItems: center);
+    @include flex($direction: column, $gap: 40px, $alignItems: center);
     padding: 40px 0 80px;
   }
 }
