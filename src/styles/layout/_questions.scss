@@ -7,7 +7,7 @@
     grid-template-columns: 30% 70%;
     gap: 60px;
 
-    @include media-mobile {
+    @include media-tablet {
       width: 90%;
       grid-template-columns: 1fr;
     }
@@ -18,7 +18,7 @@
   @include flex($direction: column, $gap: 20px);
 
   & h2, p {
-    @include media-mobile {
+    @include media-tablet {
       text-align: center;
     }
   }
@@ -45,7 +45,6 @@
       display: flex;
       padding: 15px;
       background-color: $color-light-dark;
-      ga
 
       & summary::after {
         content: '';
