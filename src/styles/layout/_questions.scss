@@ -1,0 +1,101 @@
+.questions {
+  padding: 50px 0 100px;
+
+  .wrapper {
+    width: 70%;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    gap: 60px;
+
+    @include media-mobile {
+      width: 90%;
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.questions__left {
+  @include flex($direction: column, $gap: 20px);
+
+  & h2, p {
+    @include media-mobile {
+      text-align: center;
+    }
+  }
+
+  & a {
+    color: $color-sky-blue;
+    padding-left: 10px;
+    font-weight: 500;
+  }
+}
+
+.questions__right {
+  & ul {
+    @include flex($direction: column, $gap: 20px);
+    list-style: none;
+  }
+
+  & details {
+    padding: 15px;
+    transition: all 0.3s;
+    border-radius: $radius-base;
+
+    &[open] {
+      display: flex;
+      padding: 15px;
+      background-color: $color-light-dark;
+      ga
+
+      & summary::after {
+        content: '';
+        width: 30px;
+        height: 30px;
+        display: block;
+        background-image: url('../assets/icons/IC_chevron-down.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        transform: rotate(180deg);
+      }
+    }
+
+    & h3 {
+      font-size: $fs-base;
+      flex: 1;
+    }
+
+    & p {
+      font-size: $fs-small;
+      padding-top: 10px;
+    }
+
+    & summary {
+      @include flex($justify: space-between, $gap: 10px);
+
+      &::marker {
+        display: none;
+      }
+
+      &::after {
+        transition: all 0.3s;
+        content: '';
+        width: 30px;
+        height: 30px;
+        display: block;
+        background-image: url('../assets/icons/IC_chevron-down.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    &:hover {
+      background-color: $color-light-dark;
+    }
+  }
+}
