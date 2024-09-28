@@ -1,3 +1,8 @@
+///mixin flex принимает параметры:
+/// @param {string} $direction
+/// @param {string} $alignItems
+/// @param {string} $justify
+/// @param {string} $gap
 @mixin flex($direction: row, $alignItems: normal, $justify: normal, $gap: 0) {
   display: flex;
   flex-direction: $direction;
